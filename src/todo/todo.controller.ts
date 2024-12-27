@@ -34,14 +34,12 @@ export class TodoController {
                     console.log('No tasks found.');
                     return;
                 }
-
+                console.log("Those are the tasks");
                 todos.forEach((todo) => {
-                    const id = todo.id.toString().padEnd(8, ' ');
+                    const id = todo.id.toString().padEnd(3, ' ');
                     const title = todo.title.padEnd(15, ' ');
                     const description = todo.description.padEnd(25, ' ');
                     const completed = (todo.completed ? '✔' : '✖').padEnd(10, ' ');
-                
-                    console.log("Those are the tasks");
                     console.log(
                         `${id} | ${title} | ${description} | ${completed}`
                     );
